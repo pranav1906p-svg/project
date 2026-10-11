@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Card</title>
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: whitesmoke;
+}
+
+.card {
+    width: 450px;
+    padding: 40px 30px;
+
+    background-color: white;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px lightgray(0, 0, 0, 0.12);
+
+}
+.card:hover{
+    transition: ;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 6px solid #4b35d8;
+
+    padding: 4px;
+
+    background-color: #4b35d8;
+}
+
+h1 {
+    margin: 20px 0 10px;
+
+    font-size: 32px;
+}
+
+h3 {
+    margin: 0 0 20px;
+
+    color: #4535c5;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+.skills span {
+    padding: 8px 15px;
+
+    background-color: #f0f3ff;
+
+    color: #4535c5;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #4b35d8;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3522b5;
+}
+</style>
+</head>
+<body>
+
+    <div class="card">
+
+    <img src=data:image/jpeg;base64,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
+class="profile">
+
+        <h1>Priya Rahul</h1>
+
+        <h3>Java Full Stack Development</h3>
+
+        <p>📍 Bengaluru</p>
+
+        <p>📧 priya@example.com</p>
+
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Java</span>
+            <span>JavaScript</span>
+        </div>
+
+        <div class="buttons">
+            <button>View Profile</button>
+            <button>Contact</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
